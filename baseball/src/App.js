@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Display from './count/Display.js'
+import Display from './Components/Display.js'
 import './App.css';
 
 class App extends Component {

@@ -51,17 +51,20 @@ const Display = () => {
 
     return (
         <div>
-            <div>Strikes:{strikes}</div>
-            <div>Balls:{balls}</div>
-            <div>Hits:{hits}</div>
-            <Dashboard 
-                throwBall={throwBall}
-                throwStrike={throwStrike}
-                foulBall={foulBall}
-                hitBall={hitBall}
-             /> 
-             <button onClick={reset}>Reset</button>  
-        </div>    
+            <h1>Player's At Bat</h1>
+            <div>
+                <div>Strikes:{strikes}</div>
+                <div>Balls:{balls}</div>
+                <div>Hits:{hits}</div>
+                <Dashboard 
+                    throwBall={throwBall}
+                    throwStrike={throwStrike}
+                    foulBall={foulBall}
+                    hitBall={hitBall}
+                /> 
+                <button onClick={reset}>Reset</button>  
+            </div> 
+        </div>
     )
 }
 
