@@ -32,10 +32,39 @@ describe('<Display/>', () => {
     const {getByText} = render(<Display/>);
     const button = getByText(/reset/i)
     fireEvent.click(button);
-    getByText(/strikes/i);
-    // getByText(/balls: 0/i);
-    // getByText(/hits: 0/i);
-
-
+    getByText(/strikes:0/i);
+    getByText(/balls:0/i);
+    getByText(/hits:0/i);
   })
+
+  it('Increase ball by 1', () => {
+    const {getByText} = render(<Display/>);
+    const button = getByText(/Throw Ball/i)
+    fireEvent.click(button);
+    getByText(/balls:1/i)
+  })
+
+  it('Increase strike by 1', () => {
+    const {getByText} = render(<Display/>);
+    const button = getByText(/Throw Strike/i)
+    fireEvent.click(button);
+    getByText(/strikes:1/i)
+  })
+
+  it('Increase strike by 1', () => {
+    const {getByText} = render(<Display/>);
+    const button = getByText(/Foul Ball/i)
+    fireEvent.click(button);
+    getByText(/strikes:2/i)
+  })
+
+//   it('Increase hit by 1', () => {
+//     const {getByText} = render(<Display/>);
+//     const button = getByText(/HIT/i)
+//     fireEvent.click(button);
+//     getByText(/hits:1/i)
+//   })
+
+
+
 })
